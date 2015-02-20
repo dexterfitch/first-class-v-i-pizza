@@ -1,15 +1,608 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.2.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>First Class VIPizza</title>
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.2.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>First Class VIPizza</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 id="sub-heading">First Class</h2>
+
+    <h1 id="heading">VIPizza</h1>
+
+    <div class="col-md-12" id="recipe-box">
+      <div class="col-md-4" id="recipe-list">
+        <h3>World Class Recipes</h3>
+
+        <div class="col-md-6">
+          <ul class="list-unstyled">
+            <li class="pizza-recipe">Chicago</li>
+
+            <li class="pizza-recipe">NY</li>
+
+            <li class="pizza-recipe">Philly</li>
+
+            <li class="pizza-recipe">Rio de Janeiro</li>
+
+            <li class="pizza-recipe">Naples</li>
+
+            <li class="pizza-recipe">Paris</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <ul class="list-unstyled">
+            <li class="pizza-recipe">Berlin</li>
+
+            <li class="pizza-recipe">Moscow</li>
+
+            <li class="pizza-recipe">Athens</li>
+
+            <li class="pizza-recipe">Istanbul</li>
+
+            <li class="pizza-recipe">New Delhi</li>
+
+            <li class="pizza-recipe">Nagoya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4" id="recipe-description">
+        <span id="recipe-text"></span>
+      </div>
+
+      <div class="col-md-4" id="pizza-stats">
+        <span id="pizza-total"></span>
+
+        <ul class="list-unstyled" id="all-pizzas"></ul>
+      </div>
     </div>
-  </body>
+
+    <div class="col-md-12" id="pizza-customizer">
+      <h2>Create Your Own Master-pizza</h2>
+      <form id="pizza-maker">
+        <div class="col-md-4" id="size-selector">
+          <div class="form-group">
+            <label for="pizza-size">Choose Size:</label> <select class="form-control input-sm" id="pizza-size" required="">
+              <option value="8">
+                Personal - 8"
+              </option>
+
+              <option value="10">
+                Small - 10"
+              </option>
+
+              <option value="12">
+                Medium - 12"
+              </option>
+
+              <option value="14">
+                Large - 14"
+              </option>
+
+              <option value="16">
+                XL - 16"
+              </option>
+
+              <option value="18">
+                Family - 18"
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-4" id="crust-selector">
+          <div class="form-group">
+            <label for="pizza-crust">Choose Crust:</label> <select class="form-control input-sm" id="pizza-crust" required="">
+              <option value="cracker">
+                Cracker
+              </option>
+
+              <option value="thin">
+                Thin
+              </option>
+
+              <option value="classic">
+                Classic
+              </option>
+
+              <option value="deep-dish">
+                Deep Dish
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-4" id="cut-selector">
+          <div class="form-group">
+            <label for="pizza-cut">Choose Cut:</label> <select class="form-control input-sm" id="pizza-cut" required="">
+              <option value="wheel">
+                Wheel - Classic Triangles
+              </option>
+
+              <option value="slim">
+                Slim - Slim-cut Triangles
+              </option>
+
+              <option value="grid">
+                Grid - Chicago Favourite
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-12" id="topping-selector">
+          <p><small>Hold "Shift" to select multiple toppings in a list.<br>
+          First 6 toppings free, then $1 each thereafter.</small></p>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="sauce">Sauce:</label> <select class="form-control input-sm" id="sauce" multiple required="" size="10">
+                <optgroup label="Classic Tomato">
+                  <option value="savory-tomato">
+                    Savory Onion
+                  </option>
+
+                  <option value="sweet-tomato">
+                    Sweet Basil
+                  </option>
+                </optgroup>
+
+                <optgroup label="New Classics">
+                  <option value="pesto">
+                    Pesto
+                  </option>
+
+                  <option value="white-sauce">
+                    Garlic Parmesan
+                  </option>
+
+                  <option value="barbeque">
+                    Barbeque
+                  </option>
+                </optgroup>
+
+                <optgroup label="Frisky">
+                  <option value="teriyaki">
+                    Teriyaki
+                  </option>
+
+                  <option value="creme-fraiche">
+                    Cr&egrave;me Fra&icirc;che
+                  </option>
+
+                  <option value="adobo">
+                    Adobo
+                  </option>
+
+                  <option value="curry">
+                    Brown Curry
+                  </option>
+                </optgroup>
+
+                <optgroup label="Sweet">
+                  <option value="cinnamon-sugar">
+                    Cinnamon-Sugar
+                  </option>
+
+                  <option value="cream-cheese">
+                    Cream Cheese
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="cheese">Cheese:</label> <select class="form-control input-sm" id="cheese" multiple required="" size="10">
+                <optgroup label="Classic">
+                  <option value="mozzarella">
+                    Mozzarella
+                  </option>
+
+                  <option value="parmesan">
+                    Parmesan
+                  </option>
+
+                  <option value="provolone">
+                    Provolone
+                  </option>
+
+                  <option value="vegan-cheese">
+                    Vegan Mozz
+                  </option>
+                </optgroup>
+
+                <optgroup label="Modern">
+                  <option value="asiago">
+                    Asiago
+                  </option>
+
+                  <option value="cheddar">
+                    Cheddar
+                  </option>
+
+                  <option value="jack">
+                    Monterey Jack
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="fruit-veg">Fruit &amp; Veg:</label> <select class="form-control input-sm" id="fruit-veg" multiple required="" size="10">
+                <optgroup label="Veggies">
+                  <option value="diced-tomato">
+                    Diced Tomato
+                  </option>
+
+                  <option value="sliced-tomato">
+                    Sliced Tomato
+                  </option>
+
+                  <option value="mushroom">
+                    Mushroom
+                  </option>
+
+                  <option value="green-pepper">
+                    Green Pepper
+                  </option>
+
+                  <option value="red-pepper">
+                    Red Pepper
+                  </option>
+
+                  <option value="red-onion">
+                    Red Onion
+                  </option>
+
+                  <option value="banana-pepper">
+                    Banana Pepper
+                  </option>
+
+                  <option value="sliced-pickle">
+                    Sliced Pickle
+                  </option>
+
+                  <option value="green-olive">
+                    Green Olive
+                  </option>
+
+                  <option value="black-olive">
+                    Black Olive
+                  </option>
+
+                  <option value="sliced-jalapeno">
+                    Sliced Jalape&ntilde;o
+                  </option>
+
+                  <option value="corn">
+                    Corn
+                  </option>
+
+                  <option value="roasted-garlic">
+                    Roast Garlic
+                  </option>
+
+                  <option value="asparagus">
+                    Asparagus
+                  </option>
+
+                  <option value="eggplant">
+                    Eggplant
+                  </option>
+
+                  <option value="mashed-potato">
+                    Mashed Potato
+                  </option>
+
+                  <option value="diced-potato">
+                    Diced Potato
+                  </option>
+
+                  <option value="chickpea">
+                    Chickpea
+                  </option>
+
+                  <option value="spinach">
+                    Spinach
+                  </option>
+                </optgroup>
+
+                <optgroup label="Fruit">
+                  <option value="pineapple">
+                    Pineapple
+                  </option>
+
+                  <option value="blueberry">
+                    Blueberry Preserves
+                  </option>
+
+                  <option value="apple">
+                    Apple Preserves
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="protein">Protein:</label> <select class="form-control input-sm" id="protein" multiple required="" size="10">
+                <optgroup label="Beef">
+                  <option value="ground-beef">
+                    Ground Beef
+                  </option>
+
+                  <option value="pepperoni">
+                    Pepperoni
+                  </option>
+
+                  <option value="steak">
+                    Sliced Steak
+                  </option>
+
+                  <option value="taco">
+                    Gringo Taco
+                  </option>
+                </optgroup>
+
+                <optgroup label="Poultry">
+                  <option value="grilled-chicken">
+                    Grilled Chicken
+                  </option>
+
+                  <option value="roast-turkey">
+                    Roast Turkey
+                  </option>
+
+                  <option value="roast-duck">
+                    Roast Duck
+                  </option>
+                </optgroup>
+
+                <optgroup label="Pork">
+                  <option value="bacon">
+                    Bacon
+                  </option>
+
+                  <option value="canadian-bacon">
+                    Canadian Bacon
+                  </option>
+
+                  <option value="sausage">
+                    Sausage
+                  </option>
+                </optgroup>
+
+                <optgroup label="Seafood">
+                  <option value="tuna">
+                    Tuna
+                  </option>
+
+                  <option value="shrimp">
+                    Shrimp
+                  </option>
+
+                  <option value="crab">
+                    Crab
+                  </option>
+
+                  <option value="Squid">
+                    Squid
+                  </option>
+
+                  <option value="anchovy">
+                    Anchovies
+                  </option>
+                </optgroup>
+
+                <optgroup label="Fancy Cheese">
+                  <option value="paneer">
+                    Paneer
+                  </option>
+
+                  <option value="goat-cheese">
+                    Goat Cheese
+                  </option>
+
+                  <option value="ricotta">
+                    Ricotta
+                  </option>
+
+                  <option value="feta">
+                    Feta
+                  </option>
+
+                  <option value="blue-cheese">
+                    Blue Cheese
+                  </option>
+                </optgroup>
+
+                <optgroup label="Vegan">
+                  <option value="vegan-bacon">
+                    Vegan Bacon
+                  </option>
+                  <option value="vegan-taco">
+                    Vegan Gringo Taco
+                  </option>
+                  <option value="vegan-chicken">
+                    Vegan Chicken
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="shake">Shake:</label> <select class="form-control input-sm" id="shake" multiple required="" size="10">
+                <optgroup label="Spicy">
+                  <option value="red-pepper">
+                    Crushed Red Pepper
+                  </option>
+
+                  <option value="chipotle">
+                    Chipotle Powder
+                  </option>
+
+                  <option value="paprika">
+                    Paprika
+                  </option>
+                </optgroup>
+
+                <optgroup label="Savory">
+                  <option value="black-pepper">
+                    Black Pepper
+                  </option>
+
+                  <option value="parmesan">
+                    Parmesan
+                  </option>
+
+                  <option value="sesame-seed">
+                    Sesame Seed
+                  </option>
+
+                  <option value="garlic-powder">
+                    Garlic
+                  </option>
+
+                  <option value="oregano">
+                    Oregano
+                  </option>
+
+                  <option value="parsley">
+                    Parsley
+                  </option>
+
+                  <option value="basil">
+                    Basil
+                  </option>
+                </optgroup>
+
+                <optgroup label="Sweet">
+                  <option value="powdered-sugar">
+                    Powdered Sugar
+                  </option>
+                  <option value="rainbow-sprinkles">
+                    Rainbow Sprinkles
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-2 topping-column">
+            <div class="form-group">
+              <label for="drizzle">Drizzle:</label> <select class="form-control input-sm" id="drizzle" multiple required="" size="10">
+                <optgroup label="Spicy">
+                  <option value="hot-sauce">
+                    Hot Sauce
+                  </option>
+
+                  <option value="sriracha">
+                    Sriracha
+                  </option>
+
+                  <option value="salsa">
+                    Salsa Picante
+                  </option>
+                </optgroup>
+
+                <optgroup label="Savory">
+                  <option value="garlic-butter">
+                    Garlic Butter
+                  </option>
+
+                  <option value="barbeque">
+                    Barbeque Sauce
+                  </option>
+
+                  <option value="beef-gravy">
+                    Beef Gravy
+                  </option>
+
+                  <option value="ranch">
+                    Ranch
+                  </option>
+
+                  <option value="japanese-mayo">
+                    Japanese Mayo
+                  </option>
+
+                  <option value="tahini">
+                    Tahini
+                  </option>
+                </optgroup>
+
+
+                <optgroup label="Sweet">
+                  <option value="honey">
+                    Honey
+                  </option>
+
+                  <option value="dark-chocolate">
+                    Dark Chocolate
+                  </option>
+
+                  <option value="icing">
+                    Icing
+                  </option>
+                </optgroup>
+
+                <optgroup label="Plain Jane">
+                  <option value="none">
+                    None
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 center">
+          <button type="submit" class="btn btn-danger">Add Pizza</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
