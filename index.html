@@ -1,236 +1,235 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Righteous|Roboto+Condensed:700,400|Slabo+27px' rel='stylesheet' type='text/css'>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-1.11.2.js"></script>
   <script src="js/scripts.js"></script>
 
-  <title>First Class VIPizza</title>
+  <title>VIPizza</title>
 </head>
 
 <body>
   <div class="container">
-    <h2 id="sub-heading">First Class</h2>
-
-    <h1 id="heading">VIPizza</h1>
+    <div class="col-md-12" id="header">
+      <h1 id="heading">VIPizza</h1>
+    </div>
 
     <div class="col-md-12" id="recipe-box">
-      <div class="col-md-4" id="recipe-list">
-        <h3>World Class Recipes</h3>
+      <div class="col-md-12" id="recipe-group">
+        <div class="col-md-4 child" id="recipe-list">
+          <h2>World Class Recipes</h2>
 
-        <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li class="pizza-recipe" id="chicago">Chicago</li>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li class="pizza-recipe" id="chicago">Chicago</li>
 
-            <li class="pizza-recipe" id="ny">NY</li>
+              <li class="pizza-recipe" id="ny">NY</li>
 
-            <li class="pizza-recipe" id="philly">Philly</li>
+              <li class="pizza-recipe" id="philly">Philly</li>
 
-            <li class="pizza-recipe" id="rio-de-janeiro">Rio de Janeiro</li>
+              <li class="pizza-recipe" id="rio-de-janeiro">Rio de Janeiro</li>
 
-            <li class="pizza-recipe" id="naples">Naples</li>
+              <li class="pizza-recipe" id="naples">Naples</li>
 
-            <li class="pizza-recipe" id="paris">Paris</li>
-          </ul>
+              <li class="pizza-recipe" id="paris">Paris</li>
+
+              <li class="pizza-recipe" id="berlin">Berlin</li>
+
+              <li class="pizza-recipe" id="moscow">Moscow</li>
+
+              <li class="pizza-recipe" id="athens">Athens</li>
+
+              <li class="pizza-recipe" id="istanbul">Istanbul</li>
+
+              <li class="pizza-recipe" id="new-delhi">New Delhi</li>
+
+              <li class="pizza-recipe" id="nagoya">Nagoya</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li class="pizza-recipe" id="berlin">Berlin</li>
+        <div class="col-md-4 child" id="recipe-description">
+          <h2>Click a City for Local Flavor</h2>
+          <div id="chicago-recipe">
+            <h2>Deep Dish Supreme</h2>
+            <h6 class="country-subtitle">(Chicago, IL)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Deep Dish</li>
+              <li><b>Sauce: </b>Savory Onion</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms, Green Peppers</li>
+              <li><b>Protein: </b>Pepperoni, Sausage</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-            <li class="pizza-recipe" id="moscow">Moscow</li>
+          <div id="ny-recipe">
+            <h2>Pepperoni, NY</h2>
+            <h6 class="country-subtitle">(New York, NY)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Thin</li>
+              <li><b>Sauce: </b>Sweet Basil</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>None</li>
+              <li><b>Protein: </b>Pepperoni</li>
+              <li><b>Shake: </b>Oregano, Crushed Red Pepper</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-            <li class="pizza-recipe" id="athens">Athens</li>
+          <div id="philly-recipe">
+            <h2>Cheesesteak</h2>
+            <h6 class="country-subtitle">(Philadelphia, PA)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Garlic Parmesan</li>
+              <li><b>Cheese: </b>Provolone</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onions, Green Peppers</li>
+              <li><b>Protein: </b>Sliced Steak</li>
+              <li><b>Shake: </b>Black Pepper</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-            <li class="pizza-recipe" id="istanbul">Istanbul</li>
+          <div id="rio-de-janeiro-recipe">
+            <h2>Bauru</h2>
+            <h6 class="country-subtitle">(Rio de Janeiro, Brazil)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Garlic Parmesan</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Sliced Pickle, Sliced Tomato</li>
+              <li><b>Protein: </b>Canadian Bacon</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-            <li class="pizza-recipe" id="new-delhi">New Delhi</li>
+          <div id="naples-recipe">
+            <h2>Margherita</h2>
+            <h6 class="country-subtitle">(Naples, Italy)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Thin</li>
+              <li><b>Sauce: </b>Sweet Basil</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Sliced Tomato, Fresh Basil</li>
+              <li><b>Protein: </b>Mozzarella Pearls</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-            <li class="pizza-recipe" id="nagoya">Nagoya</li>
-          </ul>
-        </div>
-      </div>
+          <div id="paris-recipe">
+            <h2>Tarte Flamb&#233;e</h2>
+            <h6 class="country-subtitle">(Paris, France)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Thin</li>
+              <li><b>Sauce: </b>Cr&egrave;me Fra&icirc;che</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms</li>
+              <li><b>Protein: </b>Bacon, Goat Cheese</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-      <div class="col-md-4" id="recipe-description">
-        <h3>Click a City for Local Flavor</h3>
-        <div id="chicago-recipe">
-          <h3>Deep Dish Supreme</h3>
-          <h6 class="country-subtitle">(Chicago, IL)</h6>
-          <ul>
-            <li><b>Crust: </b>Deep Dish</li>
-            <li><b>Sauce: </b>Savory Onion</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms, Green Peppers</li>
-            <li><b>Protein: </b>Pepperoni, Sausage</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
+          <div id="berlin-recipe">
+            <h2>Thunfischpizza</h2>
+            <h6 class="country-subtitle">(Berlin, Germany)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Savory Onion</li>
+              <li><b>Cheese: </b>Asiago</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onion</li>
+              <li><b>Protein: </b>Tuna</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-        <div id="ny-recipe">
-          <h3>Pepperoni, NY</h3>
-          <h6 class="country-subtitle">(New York, NY)</h6>
-          <ul>
-            <li><b>Crust: </b>Thin</li>
-            <li><b>Sauce: </b>Sweet Basil</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>None</li>
-            <li><b>Protein: </b>Pepperoni</li>
-            <li><b>Shake: </b>Oregano, Crushed Red Pepper</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
+          <div id="moscow-recipe">
+            <h2>Russkiy Derevenskiye</h2>
+            <h6 class="country-subtitle">(Moscow, Russia)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Savory Onion</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Sliced Pickles, Diced Tomatoes, Mashed Potatoes</li>
+              <li><b>Protein: </b>Ground Beef, Bacon</li>
+              <li><b>Shake: </b>Parsley</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-        <div id="philly-recipe">
-          <h3>Cheesesteak</h3>
-          <h6 class="country-subtitle">(Philadelphia, PA)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Garlic Parmesan</li>
-            <li><b>Cheese: </b>Provolone</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onions, Green Peppers</li>
-            <li><b>Protein: </b>Sliced Steak</li>
-            <li><b>Shake: </b>Black Pepper</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
+          <div id="athens-recipe">
+            <h2>Greca</h2>
+            <h6 class="country-subtitle">(Athens, Greece)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Thin</li>
+              <li><b>Sauce: </b>Garlic Parmesan</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms, Green Peppers, Black Olives</li>
+              <li><b>Protein: </b>Feta</li>
+              <li><b>Shake: </b>None</li>
+              <li><b>Drizzle: </b>None</li>
+            </ul>
+          </div>
 
-        <div id="rio-de-janeiro-recipe">
-          <h3>Bauru</h3>
-          <h6 class="country-subtitle">(Rio de Janeiro, Brazil)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Garlic Parmesan</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Sliced Pickle, Sliced Tomato</li>
-            <li><b>Protein: </b>Canadian Bacon</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
+          <div id="istanbul-recipe">
+            <h2>Turkish Delight</h2>
+            <h6 class="country-subtitle">(Istanbul, Turkey)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Savory Onion</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onion, Red Pepper, Jalape&ntilde;o, Black Olive</li>
+              <li><b>Protein: </b>Goat Cheese</li>
+              <li><b>Shake: </b>Chipotle Powder</li>
+              <li><b>Drizzle: </b>Tahini</li>
+            </ul>
+          </div>
 
-        <div id="naples-recipe">
-          <h3>Margherita</h3>
-          <h6 class="country-subtitle">(Naples, Italy)</h6>
-          <ul>
-            <li><b>Crust: </b>Thin</li>
-            <li><b>Sauce: </b>Sweet Basil</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Sliced Tomato, Fresh Basil</li>
-            <li><b>Protein: </b>Mozzarella Pearls</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
+          <div id="new-delhi-recipe">
+            <h2>Chicken Pizza Masala</h2>
+            <h6 class="country-subtitle">(New Delhi, India)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Masala</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Red Onion, Green Pepper </li>
+              <li><b>Protein: </b>Chicken, Paneer</li>
+              <li><b>Shake: </b>Paprika</li>
+              <li><b>Drizzle: </b>Curry</li>
+            </ul>
+          </div>
 
-        <div id="paris-recipe">
-          <h3>Tarte Flamb&#233;e</h3>
-          <h6 class="country-subtitle">(Paris, France)</h6>
-          <ul>
-            <li><b>Crust: </b>Thin</li>
-            <li><b>Sauce: </b>Cr&egrave;me Fra&icirc;che</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms</li>
-            <li><b>Protein: </b>Bacon, Goat Cheese</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
-
-        <div id="berlin-recipe">
-          <h3>Thunfischpizza</h3>
-          <h6 class="country-subtitle">(Berlin, Germany)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Savory Onion</li>
-            <li><b>Cheese: </b>Asiago</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onion</li>
-            <li><b>Protein: </b>Tuna</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
-
-        <div id="moscow-recipe">
-          <h3>Russkiy Derevenskiye</h3>
-          <h6 class="country-subtitle">(Moscow, Russia)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Savory Onion</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Sliced Pickles, Diced Tomatoes, Mashed Potatoes</li>
-            <li><b>Protein: </b>Ground Beef, Bacon</li>
-            <li><b>Shake: </b>Parsley</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
-
-        <div id="athens-recipe">
-          <h3>Greca</h3>
-          <h6 class="country-subtitle">(Athens, Greece)</h6>
-          <ul>
-            <li><b>Crust: </b>Thin</li>
-            <li><b>Sauce: </b>Garlic Parmesan</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onions, Mushrooms, Green Peppers, Black Olives</li>
-            <li><b>Protein: </b>Feta</li>
-            <li><b>Shake: </b>None</li>
-            <li><b>Drizzle: </b>None</li>
-          </ul>
-        </div>
-
-        <div id="istanbul-recipe">
-          <h3>Turkish Delight</h3>
-          <h6 class="country-subtitle">(Istanbul, Turkey)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Savory Onion</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onion, Red Pepper, Jalape&ntilde;o, Black Olive</li>
-            <li><b>Protein: </b>Goat Cheese</li>
-            <li><b>Shake: </b>Chipotle Powder</li>
-            <li><b>Drizzle: </b>Tahini</li>
-          </ul>
-        </div>
-
-        <div id="new-delhi-recipe">
-          <h3>Chicken Pizza Masala</h3>
-          <h6 class="country-subtitle">(New Delhi, India)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Masala</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Red Onion, Green Pepper </li>
-            <li><b>Protein: </b>Chicken, Paneer</li>
-            <li><b>Shake: </b>Paprika</li>
-            <li><b>Drizzle: </b>Curry</li>
-          </ul>
+          <div id="nagoya-recipe">
+            <h2>Pot&#233;-Mayo</h2>
+            <h6 class="country-subtitle">(Nagoya, Japan)</h6>
+            <ul class="list-unstyled">
+              <li><b>Crust: </b>Classic</li>
+              <li><b>Sauce: </b>Savory Onion</li>
+              <li><b>Cheese: </b>Mozzarella</li>
+              <li><b>Fruit &amp; Veg: </b>Corn, Diced Potato</li>
+              <li><b>Protein: </b>Bacon</li>
+              <li><b>Shake: </b>Parsley</li>
+              <li><b>Drizzle: </b>Japanese Mayo</li>
+            </ul>
+          </div>
         </div>
 
-        <div id="nagoya-recipe">
-          <h3>Pot&#233;-Mayo</h3>
-          <h6 class="country-subtitle">(Nagoya, Japan)</h6>
-          <ul>
-            <li><b>Crust: </b>Classic</li>
-            <li><b>Sauce: </b>Savory Onion</li>
-            <li><b>Cheese: </b>Mozzarella</li>
-            <li><b>Fruit &amp; Veg: </b>Corn, Diced Potato</li>
-            <li><b>Protein: </b>Bacon</li>
-            <li><b>Shake: </b>Parsley</li>
-            <li><b>Drizzle: </b>Japanese Mayo</li>
+        <div class="col-md-4 child" id="pizza-stats">
+          <h2>Your Pizza</h2>
+          <span id="pizza-total"></span><br>
+          <span id="slice-total"></span>
+
+          <ul class="list-unstyled" id="all-pizzas">
+
           </ul>
         </div>
-      </div>
-
-      <div class="col-md-4" id="pizza-stats">
-        <h3>Your Pizza</h3>
-        <span id="pizza-total"></span><br>
-        <span id="slice-total"></span>
-
-        <ul id="all-pizzas">
-
-        </ul>
       </div>
     </div>
 
@@ -320,9 +319,6 @@
         </div>
 
         <div class="col-md-12" id="topping-selector">
-          <p><small>Hold "Shift" to select multiple toppings in a list.<br>
-          First 6 toppings free, then $1 each thereafter.</small></p>
-
           <div class="col-md-2 topping-column">
             <div class="form-group">
               <label for="sauce">Sauce:</label> <select class="form-control input-sm" id="sauce" multiple required="true" size="10">
@@ -800,9 +796,10 @@
               </select>
             </div>
           </div>
+          <p class="center"><small>Hold "Ctrl" to select multiple toppings in a list. First 6 toppings free, then $1 each thereafter.</small></p>
         </div>
-        <div class="col-md-12 center">
-          <button type="submit" class="btn btn-danger">Add Pizza</button>
+        <div class="col-md-12 center" id="button-container">
+          <button type="submit" class="btn btn-info button">Add Pizza</button>
         </div>
       </form>
     </div>

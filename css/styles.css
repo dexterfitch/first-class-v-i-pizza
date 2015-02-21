@@ -1,25 +1,72 @@
+body {
+  background: #F8F3F9;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 h1#heading {
-  margin-top: -12px;
+  font-family: 'Righteous', cursive;
+  font-size: 3.5em;
+  margin: 0;
+  color: #E44424;
 }
 
-h2#sub-heading {
-  margin-top: -2px;
-}
-
-h3 {
-  margin-top: 5px;
+h2 {
+  font-family: 'Slabo 27px', serif;
+  margin: 0 0 5px 0;
 }
 
 h6.country-subtitle {
-  margin-top: -6px;
+  margin: 5px 0;
+}
+
+#all-pizzas > li:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 10px;
+  content: "\e080";
+}
+
+#button-container {
+  margin-bottom: 15px;
+}
+
+#header {
+  background: #FFE4CC;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
 #recipe-box {
-  background: #DDD;
+  background: #92D3EC;
+  border-radius: 5px;
 }
 
-#recipe-list, #recipe-description, #pizza-stats {
+#pizza-customizer {
+  margin-top: 5px;
+  background: #FFE4CC;
+  border-radius: 5px;
+}
+
+#topping-list > li {
+  list-style:none;
+  padding-left: 15px;
+}
+
+.button, .button:hover {
+  color: #333;
+  font-weight: bold;
+}
+
+#recipe-group {
   margin: 1em 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 #chicago-recipe,

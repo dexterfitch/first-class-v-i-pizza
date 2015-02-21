@@ -107,13 +107,14 @@ $(document).ready(function() {
     newCustomer.pizzas.forEach(function(pizza) {
       $("#all-pizzas").append("<li><b>Size:</b> " + pizzaSizeText + ", " +
                               "<b>Crust:</b> " + pizza.crust + ", " +
-                              "<b>Cut:</b> " + pizza.cutStyle + "<br>" +
-                              "<small><b>Sauce:</b> " + pizza.toppings[0] + "<br>" +
-                              "<b>Cheese:</b> " + pizza.toppings[1] + "<br>" +
-                              "<b>Fruit and Veg:</b> " + pizza.toppings[2] + "<br>" +
-                              "<b>Protein:</b> " + pizza.toppings[3] + "<br>" +
-                              "<b>Shake:</b> " + pizza.toppings[4] + "<br>" +
-                              "<b>Drizzle:</b> " + pizza.toppings[5] + "</small>");
+                              "<b>Cut:</b> " + pizza.cutStyle +
+                              "<ul id='topping-list'><b>Toppings:</b>" +
+                              "<li><small><b>Sauce:</b> " + pizza.toppings[0] + "</small></li>" +
+                              "<li><small><b>Cheese:</b> " + pizza.toppings[1] + "</small></li>" +
+                              "<li><small><b>Fruit and Veg:</b> " + pizza.toppings[2] + "</small></li>" +
+                              "<li><small><b>Protein:</b> " + pizza.toppings[3] + "</small></li>" +
+                              "<li><small><b>Shake:</b> " + pizza.toppings[4] + "</small></li>" +
+                              "<li><small><b>Drizzle:</b> " + pizza.toppings[5] + "</small></li></ul>");
       newCustomer.total += pizza.price;
       newCustomer.sliceAggregate += pizza.slices;
     });
