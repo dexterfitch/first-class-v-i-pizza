@@ -33,6 +33,7 @@ var Customer = {
 };
 
 $(document).ready(function() {
+
   var newCustomer = Object.create(Customer);
 
   $("form#pizza-maker").submit(function(event) {
@@ -53,28 +54,28 @@ $(document).ready(function() {
     var pizzaCrust = $("select#pizza-crust option:selected").text();
     var pizzaCut = $("select#pizza-cut option:selected").val();
 
-    var sauce = $.map($("select#sauce option:selected"), function (el, i) {
-         return $(el).text();
+    var sauce = $.map($("select#sauce option:selected"), function (element) {
+         return $(element).text();
     });
 
-    var cheese = $.map($("select#cheese option:selected"), function (el, i) {
-         return $(el).text();
+    var cheese = $.map($("select#cheese option:selected"), function (element) {
+         return $(element).text();
     });
 
-    var fruitVeg = $.map($("select#fruit-veg option:selected"), function (el, i) {
-         return $(el).text();
+    var fruitVeg = $.map($("select#fruit-veg option:selected"), function (element) {
+         return $(element).text();
     });
 
-    var protein = $.map($("select#protein option:selected"), function (el, i) {
-         return $(el).text();
+    var protein = $.map($("select#protein option:selected"), function (element) {
+         return $(element).text();
     });
 
-    var shake = $.map($("select#shake option:selected"), function (el, i) {
-         return $(el).text();
+    var shake = $.map($("select#shake option:selected"), function (element) {
+         return $(element).text();
     });
 
-    var drizzle = $.map($("select#drizzle option:selected"), function (el, i) {
-         return $(el).text();
+    var drizzle = $.map($("select#drizzle option:selected"), function (element) {
+         return $(element).text();
     });
 
 
@@ -132,6 +133,65 @@ $(document).ready(function() {
     $("select#protein").val("");
     $("select#shake").val("");
     $("select#drizzle").val("");
+  });
 
+  $("#chicago").click(function() {
+    $("#recipe-description").children().hide();
+    $("#chicago-recipe").show();
+  });
+
+  $("#ny").click(function() {
+    $("#recipe-description").children().hide();
+    $("#ny-recipe").show();
+  });
+
+  $("#philly").click(function() {
+    $("#recipe-description").children().hide();
+    $("#philly-recipe").show();
+  });
+
+  $("#rio-de-janeiro").click(function() {
+    $("#recipe-description").children().hide();
+    $("#rio-de-janeiro-recipe").show();
+  });
+
+  $("#naples").click(function() {
+    $("#recipe-description").children().hide();
+    $("#naples-recipe").show();
+  });
+
+  $("#paris").click(function() {
+    $("#recipe-description").children().hide();
+    $("#paris-recipe").show();
+  });
+
+  $("#berlin").click(function() {
+    $("#recipe-description").children().hide();
+    $("#berlin-recipe").show();
+  });
+
+  $("#moscow").click(function() {
+    $("#recipe-description").children().hide();
+    $("#moscow-recipe").show();
+  });
+
+  $("#athens").click(function() {
+    $("#recipe-description").children().hide();
+    $("#athens-recipe").show();
+  });
+
+  $("#istanbul").click(function() {
+    $("#recipe-description").children().hide();
+    $("#istanbul-recipe").show();
+  });
+
+  $("#new-delhi").click(function() {
+    $("#recipe-description").children().hide();
+    $("#new-delhi-recipe").show();
+  });
+
+  $("#nagoya").click(function() {
+    $("#recipe-description").children().hide();
+    $("#nagoya-recipe").show();
   });
 });

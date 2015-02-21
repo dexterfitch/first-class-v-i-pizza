@@ -1,17 +1,13 @@
-.cities-column {
-  width: 50%;
-}
-
-.list-item {
-  padding-left: 2px;
+h1#heading {
+  margin-top: -12px;
 }
 
 h2#sub-heading {
   margin-top: -2px;
 }
 
-h1#heading {
-  margin-top: -12px;
+h6.country-subtitle {
+  margin-top: -6px;
 }
 
 #recipe-box {
@@ -24,11 +20,39 @@ h1#heading {
   height: 100%;
 }
 
-.topping-column {
-  padding-left: 6px;
-  padding-right: 6px;
+#chicago-recipe,
+#ny-recipe,
+#philly-recipe,
+#rio-de-janeiro-recipe,
+#naples-recipe,
+#paris-recipe,
+#berlin-recipe,
+#moscow-recipe,
+#athens-recipe,
+#istanbul-recipe,
+#new-delhi-recipe,
+#nagoya-recipe {
+  display: none;
 }
 
 .center {
   text-align: center;
+}
+
+.cities-column {
+  width: 50%;
+}
+
+.list-item {
+  padding-left: 2px;
+}
+
+.pizza-recipe:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.topping-column {
+  padding-left: 6px;
+  padding-right: 6px;
 }
