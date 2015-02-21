@@ -42,6 +42,8 @@ $(document).ready(function() {
   $("form#pizza-maker").submit(function(event) {
     event.preventDefault();
 
+    $("#all-pizzas").text("");
+
     var newPizza = Object.create(Pizza);
 
     var pizzaSizeInches = $("select#pizza-size option:selected").val();
@@ -60,25 +62,26 @@ $(document).ready(function() {
     newPizza.crust = pizzaCrust;
     newPizza.cutStyle = pizzaCut;
 
-    newPizza.pizzaAnalyzer();
+    if (newPizza.size === "Select" || newPizza.crust === "Select" || newPizza.cutStyle === "Select") {
+      alert("Please choose a size, crust, and cut style.");
+    } else {
+      newPizza.pizzaAnalyzer();
+      newCustomer.pizzas.push(newPizza);
+    }
 
-    newCustomer.pizzas.push(newPizza);
-
-    $("#all-pizzas").text("");
-    
     newCustomer.pizzas.forEach(function(pizza) {
       $("#all-pizzas").append("<li>" + pizzaSizeText + ", " + pizza.crust +
-                              " crust, " + pizza.cutStyle + " cut<br>" +
+                              " crust, " + pizza.cutStyle + " cut<br>Toppings: " +
                               pizza.toppings);
       newCustomer.total += pizza.price;
       newCustomer.sliceAggregate += pizza.slices;
     });
 
     $("#pizza-total").text("");
-    $("#pizza-total").append("$" + newCustomer.total + ".00");
+    $("#pizza-total").append("Total: $" + newCustomer.total + ".00");
 
     $("#slice-total").text("");
-    $("#slice-total").append(newCustomer.sliceAggregate + " slices");
+    $("#slice-total").append("Slices: " + newCustomer.sliceAggregate);
 
     $("select#pizza-size").val("");
     $("select#pizza-size").val("");
