@@ -1,9 +1,6 @@
 var Pizza = {
   price: 0,
   size: 0,
-  crust: "classic",
-  glutenFree: false,
-  cutStyle: "wheel",
   toppings: [],
   slices: 0,
 
@@ -41,6 +38,9 @@ $(document).ready(function() {
 
   $("form#pizza-maker").submit(function(event) {
     event.preventDefault();
+
+    newCustomer.total = 0;
+    newCustomer.sliceAggregate = 0;
 
     $("#all-pizzas").text("");
 
