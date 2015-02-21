@@ -44,11 +44,19 @@ $(document).ready(function() {
 
     var newPizza = Object.create(Pizza);
 
-    var pizzaSize = $("select#pizza-size option:selected").val();
-    var pizzaCrust = $("select#pizza-crust option:selected").val();
+    var pizzaSizeInches = $("select#pizza-size option:selected").val();
+    var pizzaSizeText = $("select#pizza-size option:selected").text();
+    var pizzaCrust = $("select#pizza-crust option:selected").text();
     var pizzaCut = $("select#pizza-cut option:selected").val();
 
-    newPizza.size = pizzaSize;
+    newPizza.toppings.push($("select#sauce option:selected").text());
+    newPizza.toppings.push($("select#cheese option:selected").text());
+    newPizza.toppings.push($("select#fruit-veg option:selected").text());
+    newPizza.toppings.push($("select#protein option:selected").text());
+    newPizza.toppings.push($("select#shake option:selected").text());
+    newPizza.toppings.push($("select#drizzle option:selected").text());
+
+    newPizza.size = pizzaSizeInches;
     newPizza.crust = pizzaCrust;
     newPizza.cutStyle = pizzaCut;
 
@@ -56,10 +64,14 @@ $(document).ready(function() {
 
     newCustomer.pizzas.push(newPizza);
 
+    $("#all-pizzas").text("");
+    
     newCustomer.pizzas.forEach(function(pizza) {
-      $("#all-pizzas").append("<li>" + pizza.size + "\" " + pizza.crust +
-                              " crust" + pizza.cutStyle + " " + pizza.toppings);
+      $("#all-pizzas").append("<li>" + pizzaSizeText + ", " + pizza.crust +
+                              " crust, " + pizza.cutStyle + " cut<br>" +
+                              pizza.toppings);
       newCustomer.total += pizza.price;
+      newCustomer.sliceAggregate += pizza.slices;
     });
 
     $("#pizza-total").text("");
@@ -67,6 +79,17 @@ $(document).ready(function() {
 
     $("#slice-total").text("");
     $("#slice-total").append(newCustomer.sliceAggregate + " slices");
+
+    $("select#pizza-size").val("");
+    $("select#pizza-size").val("");
+    $("select#pizza-crust").val("");
+    $("select#pizza-cut").val("");
+    $("select#sauce").val("");
+    $("select#cheese").val("");
+    $("select#fruit-veg").val("");
+    $("select#protein").val("");
+    $("select#shake").val("");
+    $("select#drizzle").val("");
 
   });
 });
