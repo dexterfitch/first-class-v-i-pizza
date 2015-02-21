@@ -133,6 +133,7 @@ $(document).ready(function() {
     $("select#protein").val("");
     $("select#shake").val("");
     $("select#drizzle").val("");
+
   });
 
   $("#chicago").click(function() {
@@ -194,4 +195,5 @@ $(document).ready(function() {
     $("#recipe-description").children().hide();
     $("#nagoya-recipe").show();
   });
+
 });

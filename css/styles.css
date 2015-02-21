@@ -6,6 +6,10 @@ h2#sub-heading {
   margin-top: -2px;
 }
 
+h3 {
+  margin-top: 5px;
+}
+
 h6.country-subtitle {
   margin-top: -6px;
 }
@@ -15,9 +19,7 @@ h6.country-subtitle {
 }
 
 #recipe-list, #recipe-description, #pizza-stats {
-  background: #CCC;
   margin: 1em 0;
-  height: 100%;
 }
 
 #chicago-recipe,
