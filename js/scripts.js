@@ -51,12 +51,44 @@ $(document).ready(function() {
     var pizzaCrust = $("select#pizza-crust option:selected").text();
     var pizzaCut = $("select#pizza-cut option:selected").val();
 
-    newPizza.toppings.push($("select#sauce option:selected").text());
-    newPizza.toppings.push($("select#cheese option:selected").text());
-    newPizza.toppings.push($("select#fruit-veg option:selected").text());
-    newPizza.toppings.push($("select#protein option:selected").text());
-    newPizza.toppings.push($("select#shake option:selected").text());
-    newPizza.toppings.push($("select#drizzle option:selected").text());
+    var sauce = $.map($("select#sauce option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+    var cheese = $.map($("select#cheese option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+    var fruitVeg = $.map($("select#fruit-veg option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+    var protein = $.map($("select#protein option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+    var shake = $.map($("select#shake option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+    var drizzle = $.map($("select#drizzle option:selected"), function (el, i) {
+         return $(el).text();
+    });
+
+
+    newPizza.toppings[0] = [];
+    newPizza.toppings[1] = [];
+    newPizza.toppings[2] = [];
+    newPizza.toppings[3] = [];
+    newPizza.toppings[4] = [];
+    newPizza.toppings[5] = [];
+    newPizza.toppings[0].push(sauce.join(","));
+    newPizza.toppings[1].push(cheese.join(","));
+    newPizza.toppings[2].push(fruitVeg.join(","));
+    newPizza.toppings[3].push(protein.join(","));
+    newPizza.toppings[4].push(shake.join(","));
+    newPizza.toppings[5].push(drizzle.join(","));
+
 
     newPizza.size = pizzaSizeInches;
     newPizza.crust = pizzaCrust;
@@ -70,9 +102,15 @@ $(document).ready(function() {
     }
 
     newCustomer.pizzas.forEach(function(pizza) {
-      $("#all-pizzas").append("<li>" + pizzaSizeText + ", " + pizza.crust +
-                              " crust, " + pizza.cutStyle + " cut<br>Toppings: " +
-                              pizza.toppings);
+      $("#all-pizzas").append("<li><b>Size:</b> " + pizzaSizeText + ", " +
+                              "<b>Crust:</b> " + pizza.crust + ", " +
+                              "<b>Cut:</b> " + pizza.cutStyle + "<br>" +
+                              "<small><b>Sauce:</b> " + pizza.toppings[0] + "<br>" +
+                              "<b>Cheese:</b> " + pizza.toppings[1] + "<br>" +
+                              "<b>Fruit and Veg:</b> " + pizza.toppings[2] + "<br>" +
+                              "<b>Protein:</b> " + pizza.toppings[3] + "<br>" +
+                              "<b>Shake:</b> " + pizza.toppings[4] + "<br>" +
+                              "<b>Drizzle:</b> " + pizza.toppings[5] + "</small>");
       newCustomer.total += pizza.price;
       newCustomer.sliceAggregate += pizza.slices;
     });
