@@ -1,5 +1,13 @@
 describe("Pizza", function() {
   describe("pizzaAnalyzer", function() {
+    it("calculates the price of a pizza with extra toppings", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 8;
+      testPizza.toppings = ["bacon", "cheese", "tomato", "squid ink", "cashew", "new upholstery", "phthalates", "chapstick"]
+      testPizza.pizzaAnalyzer();
+      expect(testPizza.price).to.equal(8);
+    });
+
     it("calculates the price of a personal pizza", function() {
       var testPizza = Object.create(Pizza);
       testPizza.size = 8;

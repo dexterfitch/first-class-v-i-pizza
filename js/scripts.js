@@ -8,6 +8,8 @@ var Pizza = {
   slices: 0,
 
   pizzaAnalyzer: function() {
+    this.price = this.size - 2;
+
     if (this.cutStyle === "wheel") {
       this.slices = this.size - 4;
     } else if (this.cutStyle === "slim") {
@@ -21,22 +23,50 @@ var Pizza = {
         this.slices += 25;
       }
     }
-    this.price = this.size - 2;
+
+    if (this.toppings.length > 6) {
+      this.price += (this.toppings.length - 6);
+    }
   }
 };
 
 var Customer = {
   pizzas: [],
   total: 0,
-
-  totalCalc: function() {
-    this.pizzas.forEach(function(pizza) {
-      this.total += pizza.price;
-    });
-  }
+  sliceAggregate: 0
 };
 
 $(document).ready(function() {
   var newCustomer = Object.create(Customer);
-  var newPizza = Object.create(Pizza);
+
+  $("form#pizza-maker").submit(function(event) {
+    event.preventDefault();
+
+    var newPizza = Object.create(Pizza);
+
+    var pizzaSize = $("select#pizza-size option:selected").val();
+    var pizzaCrust = $("select#pizza-crust option:selected").val();
+    var pizzaCut = $("select#pizza-cut option:selected").val();
+
+    newPizza.size = pizzaSize;
+    newPizza.crust = pizzaCrust;
+    newPizza.cutStyle = pizzaCut;
+
+    newPizza.pizzaAnalyzer();
+
+    newCustomer.pizzas.push(newPizza);
+
+    newCustomer.pizzas.forEach(function(pizza) {
+      $("#all-pizzas").append("<li>" + pizza.size + "\" " + pizza.crust +
+                              " crust" + pizza.cutStyle + " " + pizza.toppings);
+      newCustomer.total += pizza.price;
+    });
+
+    $("#pizza-total").text("");
+    $("#pizza-total").append("$" + newCustomer.total + ".00");
+
+    $("#slice-total").text("");
+    $("#slice-total").append(newCustomer.sliceAggregate + " slices");
+
+  });
 });

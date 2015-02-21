@@ -57,9 +57,12 @@
       </div>
 
       <div class="col-md-4" id="pizza-stats">
-        <span id="pizza-total"></span>
+        <span id="pizza-total"></span><br>
+        <span id="slice-total"></span>
 
-        <ul class="list-unstyled" id="all-pizzas"></ul>
+        <ul class="list-unstyled" id="all-pizzas">
+
+        </ul>
       </div>
     </div>
 
@@ -68,7 +71,11 @@
       <form id="pizza-maker">
         <div class="col-md-4" id="size-selector">
           <div class="form-group">
-            <label for="pizza-size">Choose Size:</label> <select class="form-control input-sm" id="pizza-size" required="">
+            <label for="pizza-size">Choose Size:</label> <select class="form-control input-sm" id="pizza-size" required="true">
+              <option disabled>
+                Select
+              </option>
+
               <option value="8">
                 Personal - 8"
               </option>
@@ -98,7 +105,11 @@
 
         <div class="col-md-4" id="crust-selector">
           <div class="form-group">
-            <label for="pizza-crust">Choose Crust:</label> <select class="form-control input-sm" id="pizza-crust" required="">
+            <label for="pizza-crust">Choose Crust:</label> <select class="form-control input-sm" id="pizza-crust" required="true">
+              <option disabled>
+                Select
+              </option>
+
               <option value="cracker">
                 Cracker
               </option>
@@ -120,17 +131,21 @@
 
         <div class="col-md-4" id="cut-selector">
           <div class="form-group">
-            <label for="pizza-cut">Choose Cut:</label> <select class="form-control input-sm" id="pizza-cut" required="">
-              <option value="wheel">
-                Wheel - Classic Triangles
+            <label for="pizza-cut">Choose Cut:</label> <select class="form-control input-sm" id="pizza-cut" required="true">
+              <option disabled>
+                Select
               </option>
 
-              <option value="slim">
-                Slim - Slim-cut Triangles
+              <option value="wheel">
+                Wheel - Classic triangles
               </option>
 
               <option value="grid">
-                Grid - Chicago Favourite
+                Grid - Chicago squares
+              </option>
+
+              <option value="slim">
+                Slim - Double the slices, half the calories
               </option>
             </select>
           </div>
@@ -142,8 +157,8 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="sauce">Sauce:</label> <select class="form-control input-sm" id="sauce" multiple required="" size="10">
-                <optgroup label="Classic Tomato">
+              <label for="sauce">Sauce:</label> <select class="form-control input-sm" id="sauce" multiple required="true" size="10">
+                <optgroup label="Tomato">
                   <option value="savory-tomato">
                     Savory Onion
                   </option>
@@ -153,7 +168,7 @@
                   </option>
                 </optgroup>
 
-                <optgroup label="New Classics">
+                <optgroup label="New Faves">
                   <option value="pesto">
                     Pesto
                   </option>
@@ -206,7 +221,7 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="cheese">Cheese:</label> <select class="form-control input-sm" id="cheese" multiple required="" size="10">
+              <label for="cheese">Cheese:</label> <select class="form-control input-sm" id="cheese" multiple required="true" size="10">
                 <optgroup label="Classic">
                   <option value="mozzarella">
                     Mozzarella
@@ -250,7 +265,7 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="fruit-veg">Fruit &amp; Veg:</label> <select class="form-control input-sm" id="fruit-veg" multiple required="" size="10">
+              <label for="fruit-veg">Fruit &amp; Veg:</label> <select class="form-control input-sm" id="fruit-veg" multiple required="true" size="10">
                 <optgroup label="Veggies">
                   <option value="diced-tomato">
                     Diced Tomato
@@ -354,7 +369,7 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="protein">Protein:</label> <select class="form-control input-sm" id="protein" multiple required="" size="10">
+              <label for="protein">Protein:</label> <select class="form-control input-sm" id="protein" multiple required="true" size="10">
                 <optgroup label="Beef">
                   <option value="ground-beef">
                     Ground Beef
@@ -468,7 +483,7 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="shake">Shake:</label> <select class="form-control input-sm" id="shake" multiple required="" size="10">
+              <label for="shake">Shake:</label> <select class="form-control input-sm" id="shake" multiple required="true" size="10">
                 <optgroup label="Spicy">
                   <option value="red-pepper">
                     Crushed Red Pepper
@@ -533,7 +548,7 @@
 
           <div class="col-md-2 topping-column">
             <div class="form-group">
-              <label for="drizzle">Drizzle:</label> <select class="form-control input-sm" id="drizzle" multiple required="" size="10">
+              <label for="drizzle">Drizzle:</label> <select class="form-control input-sm" id="drizzle" multiple required="true" size="10">
                 <optgroup label="Spicy">
                   <option value="hot-sauce">
                     Hot Sauce
@@ -571,6 +586,10 @@
 
                   <option value="tahini">
                     Tahini
+                  </option>
+
+                  <option value="caesar">
+                    Caesar Dressing
                   </option>
                 </optgroup>
 
