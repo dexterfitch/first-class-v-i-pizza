@@ -17,7 +17,7 @@ Testing the methods can be done via spec/spec-runner.html in the browser.
 
 ##Known Bugs
 
-No pre-built menu div yet, multiple pizzas do not display correctly.
+None.
 
 ##Motivation
 
