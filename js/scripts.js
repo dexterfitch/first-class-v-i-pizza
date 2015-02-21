@@ -41,6 +41,8 @@ $(document).ready(function() {
     newCustomer.total = 0;
     newCustomer.sliceAggregate = 0;
 
+    $("#pizza-total").text("");
+    $("#slice-total").text("");
     $("#all-pizzas").text("");
 
     var newPizza = Object.create(Pizza);
@@ -115,11 +117,10 @@ $(document).ready(function() {
       newCustomer.sliceAggregate += pizza.slices;
     });
 
-    $("#pizza-total").text("");
-    $("#pizza-total").append("Total: $" + newCustomer.total + ".00");
-
-    $("#slice-total").text("");
-    $("#slice-total").append("Slices: " + newCustomer.sliceAggregate);
+    if (newCustomer.total > 0) {
+      $("#pizza-total").append("Total: $" + newCustomer.total + ".00");
+      $("#slice-total").append("Slices: " + newCustomer.sliceAggregate);
+    }
 
     $("select#pizza-size").val("");
     $("select#pizza-size").val("");
