@@ -1,7 +1,6 @@
 var Pizza = {
   price: 0,
   size: 0,
-  toppings: [],
   slices: 0,
 
   pizzaAnalyzer: function() {
@@ -45,6 +44,7 @@ $(document).ready(function() {
     $("#all-pizzas").text("");
 
     var newPizza = Object.create(Pizza);
+    newPizza.toppings = [];
 
     var pizzaSizeInches = $("select#pizza-size option:selected").val();
     var pizzaSizeText = $("select#pizza-size option:selected").text();
