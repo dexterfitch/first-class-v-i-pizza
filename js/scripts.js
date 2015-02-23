@@ -109,7 +109,7 @@ $(document).ready(function() {
       $("#all-pizzas").append("<li><b>Size:</b> " + pizzaSizeText + ", " +
                               "<b>Crust:</b> " + pizza.crust + ", " +
                               "<b>Cut:</b> " + pizza.cutStyle +
-                              "<ul id='topping-list'><b>Toppings:</b>" +
+                              "<ul id='topping-list'><b>Toppings:</b> " + pizza.toppingsCount +
                               "<li><small><b>Sauce:</b> " + pizza.toppings[0] + "</small></li>" +
                               "<li><small><b>Cheese:</b> " + pizza.toppings[1] + "</small></li>" +
                               "<li><small><b>Fruit and Veg:</b> " + pizza.toppings[2] + "</small></li>" +
