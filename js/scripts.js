@@ -2,6 +2,8 @@ var Pizza = {
   price: 0,
   size: 0,
   slices: 0,
+  cutStyle: "wheel",
+  toppingsCount: 0,
 
   pizzaAnalyzer: function() {
     this.price = this.size - 2;
@@ -20,8 +22,8 @@ var Pizza = {
       }
     }
 
-    if (this.toppings.length > 6) {
-      this.price += (this.toppings.length - 6);
+    if (this.toppingsCount > 6) {
+      this.price += (this.toppingsCount - 6);
     }
   }
 };
@@ -78,7 +80,7 @@ $(document).ready(function() {
          return $(element).text();
     });
 
-
+    newPizza.toppingsCount = sauce.length + cheese.length + fruitVeg.length + protein.length + shake.length + drizzle.length;
     newPizza.toppings[0] = [];
     newPizza.toppings[1] = [];
     newPizza.toppings[2] = [];
@@ -91,7 +93,6 @@ $(document).ready(function() {
     newPizza.toppings[3].push(protein.join(","));
     newPizza.toppings[4].push(shake.join(","));
     newPizza.toppings[5].push(drizzle.join(","));
-
 
     newPizza.size = pizzaSizeInches;
     newPizza.crust = pizzaCrust;

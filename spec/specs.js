@@ -3,7 +3,7 @@ describe("Pizza", function() {
     it("calculates the price of a pizza with extra toppings", function() {
       var testPizza = Object.create(Pizza);
       testPizza.size = 8;
-      testPizza.toppings = ["bacon", "cheese", "tomato", "squid ink", "cashew", "new upholstery", "phthalates", "chapstick"]
+      testPizza.toppingsCount = 8;
       testPizza.pizzaAnalyzer();
       expect(testPizza.price).to.equal(8);
     });
